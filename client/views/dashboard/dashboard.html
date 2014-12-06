@@ -1,0 +1,34 @@
+<template name="dashboard">
+  <div class="dashboard">
+    <div class="page-header">
+      <h1>Dashboard</h1>
+    </div>
+      {{> addHomeForm}}
+      {{> myHomes}}
+
+<!--
+    <ul class="list-group">
+      {{#each items}}
+        <li class="list-group-item">{{ name }}</li>
+      {{/each}}
+    </ul>
+-->
+
+      
+  </div>
+</template>
+
+<template name="myHomes">
+     <ul class="list-group">
+      {{#each myHomes}}
+         <li class="list-group-item">{{ title }}<button class="remove"><i class="fa fa-trash"></i></button></li>
+      {{/each}}
+    </ul>
+</template>
+
+<template name="addHomeForm">
+    <form>
+        <input id="homeTitle" name="homeTitle" placeholder="" class="input-xlarge" required="" type="text">
+        <button type="submit" class="submitForm"><i class="fa fa-plus"></i></button>
+    </form>
+</template>
