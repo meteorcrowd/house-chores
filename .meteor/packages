@@ -27,4 +27,7 @@ anti:fake
 cunneen:mailgun
 insecure
 autopublish
+aldeed:autoform
+aldeed:collection2
+yogiben:autoform-modals
 

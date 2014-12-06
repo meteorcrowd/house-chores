@@ -5,6 +5,7 @@
     </div>
       {{> addHomeForm}}
       {{> myHomes}}
+      {{> autoformModals}}
 
 <!--
     <ul class="list-group">
@@ -21,14 +22,22 @@
 <template name="myHomes">
      <ul class="list-group">
       {{#each myHomes}}
-         <li class="list-group-item">{{ title }}<button class="remove"><i class="fa fa-trash"></i></button></li>
+         <li class="list-group-item">
+            {{ title }}
+            <a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Homes" operation="update" doc="{{_id}}">Update home</a>
+            <a href="#afModal" data-toggle="modal" class="btn btn-danger" collection="Homes" operation="remove" doc="{{_id}}">Delete Home</a>
+         </li>
       {{/each}}
     </ul>
 </template>
 
 <template name="addHomeForm">
+<!--
     <form>
         <input id="homeTitle" name="homeTitle" placeholder="" class="input-xlarge" required="" type="text">
         <button type="submit" class="submitForm"><i class="fa fa-plus"></i></button>
     </form>
+-->
+    <a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Homes" operation="insert">Add a new Home</a>
 </template>
+
