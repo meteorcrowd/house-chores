@@ -48,6 +48,24 @@ Then merge the feature branch into the development branch
   git merge d/feature
 
 
+Removing a remote branch
+=========
+
+When you want to delete a branch, first delete it on the repository
+
+.. code-block:: bash
+   git push --delete origin d/feature
+
+
+Removing a local branch
+=========
+
+You can remove the branch locally on your computer.
+
+.. code-block:: bash
+  git branch -D d/feature
+
+
 Pruning stale remote branches
 =========
 
