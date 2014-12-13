@@ -1,4 +1,6 @@
-Meteor.subscribe("currentUserHomes");
+if(Meteor.isClient){
+    Meteor.subscribe("currentUserHomes");
+}
 
 Template.dashboard.rendered = function() {
 
