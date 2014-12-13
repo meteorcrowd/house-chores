@@ -3,3 +3,4 @@ Meteor.methods({
         Homes.remove(homeId);
     }
 });
+
