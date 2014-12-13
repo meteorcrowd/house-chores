@@ -22,8 +22,16 @@ Schemas.Home = new SimpleSchema({
         type: String,
         label: "Country",
         max: 200
+    },
+    occupants: {
+        type: [String],
+        autoValue: function() {
+            if (this.isInsert) {
+                return [Meteor.userId()];
+            }
+        },
+        label: "Occupants"
     }
-
 });
 
 Homes.attachSchema(Schemas.Home);
