@@ -4,7 +4,8 @@ Template.dashboard.rendered = function() {
 
 Template.myHomes.helpers({
     'myHomes': function() {
-        return Homes.find().fetch();
+        var current_user = Meteor.userId();
+        return Homes.find({occupants: current_user}).fetch();
     }
 });
 
